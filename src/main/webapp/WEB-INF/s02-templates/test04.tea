@@ -3,23 +3,25 @@
 <html>
 <head><title>test01</title></head>
 <body>
-Who am I?: <span style="font-family: sans-serif; color: lightseagreen;"><% whoami() %></span>
+Who am I?: <span style="font-family: sans-serif; color: lightseagreen;"><% whoami() %></span><br>
 <br>
 
-jvm info: <br>
+JVM info: <br>
 <pre style="padding-left: 1em">
 <%
 foreach (s in JvmInfo.getJavaInfo()) {
     s "<br>"
 }
 %>
+</pre>
 
 <%
 if (a) {
-   "StringID(\"" a "\")=[" com.acme.labs.StringID.toString(a) "]"
-}
-%>
+   link = '<a href="../s01/hello-world">'
+   "StringID(\"" a "\")=[" link com.acme.labs.StringID.toString(a) "</a>]"
+} else {%>
+   <a href="test04?a=/hello-world">string id test</a>
+<%}%>
 
-</pre>
 </body>
 </html>
