@@ -15,10 +15,30 @@ foreach (s in JvmInfo.getJavaInfo()) {
 %>
 </pre>
 
+<table border=1 cellspacing=5 cellpadding=5>
+<%
+"<tr><td>" whoami() "<td>" getFoo() "<td>" getBar()
+"<tr><td>" App1.whoami() "<td>" App1.getFoo() "<td>" App1.getBar()
+"<tr><td>" App2.whoami() "<td>" App2.getFoo() "<td>" App2.getBar()
+"<tr><td>" App3.whoami() "<td>" App3.getFoo() "<td>" App3.getBar()
+%>
+</table>
+<br>
+<br>
+
 <%
 if (a) {
-   link = '<a href="../s01/hello-world">'
-   "StringID(\"" a "\")=[" link com.acme.labs.StringID.toString(a) "</a>]"
+    id = com.acme.labs.StringID.toString(a)
+    if (a.startsWith('/')) {
+        link = '<a href="../s01' & a & '">'
+        "StringID(\"" a "\")=[" link id "</a>]"
+    } else {
+        "StringID(\"" a "\")=[" id "]"
+    }
+    b = com.acme.labs.StringID.valueOf(id).getSource()
+    if (not a.equals(b)) {
+       warn("[" & a & "] != [" & b & "]")
+    }
 } else {%>
    <a href="test04?a=/hello-world">string id test</a>
 <%}%>
