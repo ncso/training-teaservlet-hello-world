@@ -39,6 +39,10 @@ public class StringID extends BigInteger {
 	throw new RuntimeException("not available");
     }
 
+    public static String toString(String s) {
+        return new StringID(s).toString();
+    }
+
     public static StringID valueOf(String s) {
 	return new StringID((new BigInteger(s, RADIX)));
     }

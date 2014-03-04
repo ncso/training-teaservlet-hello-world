@@ -1,0 +1,14 @@
+<% template test01() %>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head><title>test01</title></head>
+<body>
+<%
+    foo = App1.getFoo()
+    "foo is [" foo "]"
+    bar = App1.getBar()
+%>
+<br/>
+bar is "<% bar %>"
+</body>
+</html>
