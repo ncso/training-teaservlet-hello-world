@@ -24,7 +24,7 @@ public class App3 implements Application {
         LOG.debug("init");
         PropertyMap props = config.getProperties();
         _foo = props.getInteger("foo", 123);
-        _bar = props.getString("bar", "hello world!");
+        _bar = props.getString("bar", "Hello World!");
         _context = new Context3(_foo,_bar);
     }
 

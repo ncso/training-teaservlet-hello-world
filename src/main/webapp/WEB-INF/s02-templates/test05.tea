@@ -1,0 +1,25 @@
+<% template test05() %>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head><title>test05</title></head>
+<body><%
+
+App4.forEachElement() {
+    'got an element<br>\n'
+}
+
+"<br>\n"
+
+App4.forEachElement() {
+    'got element ' App4.currentElementIndex() '<br>\n'
+}
+
+"<br>\n"
+
+i = createAtomicInteger(1);
+App4.forEachElement(i) {
+    'got element ' i ' (detail: ' App4.currentElementDetail() ')<br>\n'
+}
+
+%></body>
+</html>
