@@ -1,0 +1,25 @@
+<% template test06() %>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head><title>test06</title></head>
+<body><%
+
+call test06aux () {
+    'got an element<br>\n'
+}
+
+call common.test06aux () {
+    'got an element<br>\n'
+}
+
+call common.test06loop () {
+    'got an element<br>\n'
+}
+
+i = createAtomicInteger(1)
+call common.test06loop2 (i) {
+    'got an element ' i '<br>\n'
+}
+
+%></body>
+</html>

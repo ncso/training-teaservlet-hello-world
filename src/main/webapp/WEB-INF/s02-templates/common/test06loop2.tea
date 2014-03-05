@@ -1,0 +1,10 @@
+<%
+
+import java.util.concurrent.atomic // import the package namespace
+
+template test06loop2(AtomicInteger ai) { ... }
+
+foreach (i in 1..3) {
+   %><p style="color: goldenrod;"><% ... %></p><%
+   _ = ai.incrementAndGet() /* prevent output */
+}
