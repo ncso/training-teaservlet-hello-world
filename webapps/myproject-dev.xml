@@ -1,0 +1,10 @@
+<?xml version="1.0"  encoding="UTF-8"?>
+<!DOCTYPE Configure PUBLIC "-//Jetty//Configure//EN" "http://www.eclipse.org/jetty/configure_9_0.dtd">
+<Configure class="org.eclipse.jetty.webapp.WebAppContext">
+  <Set name="descriptor">src/main/webapp/WEB-INF/web.xml</Set>
+  <Set name="resourceBase">src/main/webapp</Set>
+  <Set name="contextPath">/myproject-dev</Set>
+  <Set name="throwUnavailableOnStartupException">true</Set>
+  <Set name="extraClasspath">target/classes</Set>
+  <Call name="prependServerClass"><Arg>-org.eclipse.jetty.util.</Arg></Call>
+</Configure>

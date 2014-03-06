@@ -11,6 +11,7 @@ public class Context3 {
     private String _bar;
 
     public Context3(Integer foo, String bar) {
+        LOG.debug("init");
         _foo = foo != null ? foo : 123;
         _bar = bar != null ? bar : "hello world!";
     }

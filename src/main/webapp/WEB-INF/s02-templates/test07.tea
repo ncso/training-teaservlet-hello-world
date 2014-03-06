@@ -5,8 +5,11 @@
 <body>
 <table border=1 cellspacing=5 cellpadding=5>
 <%
+sampleText = 'hello world!'
 "<tr><td rowspan=2> MathApplication <td>" MathApplication.getE() "<td>" getE()
 "<tr>                               <td>" MathApplication.getPI() "<td>" getPI()
+"<tr><td> CryptoApplication <td>" CryptoApplication.md5HexDigest(sampleText) "<td>" md5HexDigest(sampleText)
+"<tr><td> RandomApplication <td>" RandomApplication.nextGaussian() "<td>" nextGaussian()
 %>
 </table>
 </body>

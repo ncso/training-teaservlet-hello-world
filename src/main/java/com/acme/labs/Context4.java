@@ -24,6 +24,7 @@ public class Context4 implements Context {
         LOG.debug("init");
         PropertyMap props = config.getProperties();
         _count = props.getInteger("count", 5);
+        LOG.debug("java-vm-name: [" + props.getString("java-vm-name") + "]");
     }
 
     public void forEachElement(Substitution substitution) throws Exception {
