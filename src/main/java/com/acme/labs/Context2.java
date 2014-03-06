@@ -20,7 +20,7 @@ public class Context2 implements Context {
         LOG.debug("init");
         PropertyMap props = config.getProperties();
         _foo = props.getInteger("foo", 123);
-        _bar = props.getString("bar", "hello world!");
+        _bar = props.getString("bar", "Hello World!");
     }
 
     public int getFoo() {
